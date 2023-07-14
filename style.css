@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+}
+
+.container {
+  max-width: 70%;
+}
+
+img {
+  display: block;
+  /* max-width: 51.3rem; */
+  width: 100%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 15rem;
+}
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  /* text-align: center; */
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 1rem;
+}
+
+.card__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* width: 50%; */
+  color: #fff;
+  padding: 5rem 9rem 5rem 6rem;
+}
+
+.card__title {
+  font-family: "Inter", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 2.2rem;
+  line-height: 1.2;
+}
+
+.card__title span {
+  color: hsl(277, 64%, 61%);
+}
+
+.card__description {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  color: hsla(0, 0%, 100%, 0.6);
+  margin-bottom: 8rem;
+}
+
+.card__items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5rem;
+}
+.card__item h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.card__item p {
+  font-size: 1.1rem;
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 0.6);
+  letter-spacing: 1.1px;
+}
+.card__image {
+  position: relative;
+  /* width: 50%; */
+  background-color: aliceblue;
+}
+.overlay {
+  position: absolute; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    85,
+    27,
+    121,
+    0.652
+  ); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+  html {
+    font-size: 50%;
+  }
+  img {
+    max-width: 100%;  
+  }
+  .card {
+    display:flex;
+    flex-direction: column-reverse;
+    overflow: hidden;
+  }
+  .card__title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .card__description {
+    text-align: center;
+  }
+  .card__items {
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    text-align:  center;
+    padding: 0;
+  }
+  .card__item{
+    margin-bottom: 2.5rem;
+  }
+}
